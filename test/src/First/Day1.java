@@ -15,8 +15,8 @@ public class Day1 {
 	 public void Login() {
 		 driver.findElement(By.name("uid")).sendKeys("mngr398426");
 		 driver.findElement(By.name("password")).sendKeys("tymyqUs");
-		driver.findElement(By.name("btnLogin")).click();
-		 
+		 driver.findElement(By.name("btnLogin")).click();
+		
 	}
 	 public void addCustomer() {
 		 driver.findElement(By.xpath("//a[contains(text(),'New Customer')]")).click();
