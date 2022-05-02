@@ -1,6 +1,5 @@
 package day2;
 
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -18,12 +17,12 @@ public class orangehrm extends driver{
 		 driver.findElement(By.id("txtPassword")).sendKeys("admin123"); 	 
 		 driver.findElement(By.id("btnLogin")).click();
 	}
-	@AfterTest
+	@Test
 	 public void addCustomer() {
 		 driver.findElement(By.id("menu_pim_viewMyDetails")).click();
 	}
 	
-	@AfterTest
+	@Test
 	 public void test() {
 		System.out.println(driver.findElement(By.id("employee-details")).isDisplayed());
 		}
