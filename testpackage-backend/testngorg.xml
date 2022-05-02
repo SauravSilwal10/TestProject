@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+	<suite name="Orangehrm">
+	  <test thread-count="5" name="Test">
+	    <classes>
+	    <class name="day2.orangehrm">
+	    	<methods>
+	    	<include name="callBrowser"/>
+	    	<include name="login"/>
+	    	</methods>
+	    </class>
+	    <class name="day2.orangehrm">
+	    	<methods>
+	    	<include name="callBrowser"/>
+	    	<include name="login"/>
+	    	<include name="info"/>
+	    	<include name="test"/>
+	    	<include name="verify"/>
+	    	</methods>
+	    </class>
+	    </classes>
+	  </test> 
+	</suite> 
