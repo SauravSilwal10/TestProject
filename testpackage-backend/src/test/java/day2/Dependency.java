@@ -4,12 +4,13 @@ import org.testng.annotations.Test;
 
 public class Dependency {
  static String CategoryId= "null";
- @Test(priority = 1)
+ @Test
  public void createorder() {
+	 System.out.println(5/0);
 	 System.out.println("Order is sucessfully created");
 	 CategoryId = "A123";
  }
- @Test(priority = 2)
+ @Test(dependsOnMethods = {"createorder"})
  public void trackorder() {
 	 if (CategoryId != null ) {
 	 System.out.println("Order has been tracked");
@@ -18,7 +19,7 @@ public class Dependency {
 		 System.out.println("Invalid CategoryId"); 
 	 }
  }
- @Test(priority = 3)
+ @Test(dependsOnMethods = {"createorder"})
  public void delteorder() {
 	  if (CategoryId != null) {
 	 System.out.println("Order is succesfully deleted");
