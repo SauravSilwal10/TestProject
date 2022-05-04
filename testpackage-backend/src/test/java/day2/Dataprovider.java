@@ -16,7 +16,7 @@ public class Dataprovider  extends driver{
 	@Test(dataProvider= "testdata")
 	public void login(String userName , String password) {
 		 driver.findElement(By.id("txtUsername")).sendKeys("userName");
-		 driver.findElement(By.id("txtPassword")).sendKeys("password");	 
+		 driver.findElement(By.id("txtPassword")).sendKeys("password"); 
 		 driver.findElement(By.id("btnLogin")).click();
 		 driver.quit();
 	}
