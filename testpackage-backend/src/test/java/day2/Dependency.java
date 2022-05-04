@@ -19,7 +19,7 @@ public class Dependency {
 		 System.out.println("Invalid CategoryId"); 
 	 }
  }
- @Test(dependsOnMethods = {"createorder"})
+ @Test(dependsOnMethods = {"createorder", "trackorder"} ,alwaysRun = true)
  public void delteorder() {
 	  if (CategoryId != null) {
 	 System.out.println("Order is succesfully deleted");
