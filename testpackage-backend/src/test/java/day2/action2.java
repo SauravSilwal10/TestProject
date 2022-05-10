@@ -25,6 +25,12 @@ public class action2 extends driver {
 		 ac.moveToElement(usermgmt).build().perform();
 		 ac.moveToElement(user).click().build().perform();
 	} 
+	 public void rightclick() {
+		 Actions ac = new Actions(driver);
+		 WebElement mouse =  driver.findElement(By.xpath("//td[contains(text(),'Right Click')]']"));
+		 ac.contextClick(mouse).build().perform();
+		 
+	 }
 	 
 	 public static void main(String[] args) {
 		action2 a = new action2();
