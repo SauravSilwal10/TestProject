@@ -11,6 +11,13 @@ public class NavigationMethod  extends driver{
 		 driver.findElementByXPath("//body/div[1]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/input[1]").sendKeys("cricbuzz");
 		 driver.findElementByName("btnK").submit();
 		 driver.navigate().to("https://www.facebook.com/");
+		 driver.findElementByName("email").sendKeys("grizzy");
+		 driver.navigate().refresh();
+		 Thread.sleep(2000);
+		 driver.navigate().back();
+		 Thread.sleep(2000);
+		 driver.navigate().forward();
+		
 		 
 }		public static void main(String[] args) throws InterruptedException {
 	 NavigationMethod nm = new NavigationMethod();
