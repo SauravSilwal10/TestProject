@@ -21,12 +21,23 @@ public class Contextclick extends driver{
 		 Alert alert = driver.switchTo().alert();
 		 System.out.println("Alert Text\n" +alert.getText());
 		 alert.accept();
-		 Thread.sleep(1000);
+		 Thread.sleep(3000);
+		 driver.quit();
 	 }
-	 
+	 public void contextclick() {
+		 Actions action = new Actions(driver);
+
+		 WebElement links = driver.findElement(By.cssSelector(".context-menu-one"));
+		 action.contextClick(links).perform();
+
+		 WebElement element = driver.findElement(By.cssSelector(".context-menu-icon-copy"));
+		 element.click();
+		
+	 }
 	public static void main(String[] args) throws Exception {
 		Contextclick c = new Contextclick();
 		c.openBrowser();
 		c.context();
+		c.contextclick();
 	}
 }
